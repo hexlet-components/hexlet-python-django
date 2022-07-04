@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "hello-django"
+version = "0.1.0"
+description = ""
+authors = ["Sergey Karpuk <sergeykarpuk@yandex.by>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.0.5"
+
+[tool.poetry.dev-dependencies]
+gunicorn = "^20.1.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
