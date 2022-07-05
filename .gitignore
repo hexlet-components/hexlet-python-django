@@ -1,0 +1,7 @@
+/*.egg-info
+/*.pyc
+/**/*.pyc
+/dist/
+/.venv/
+.vim/
+__pycache__/
