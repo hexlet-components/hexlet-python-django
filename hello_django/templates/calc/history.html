@@ -1,0 +1,13 @@
+<p>Последние 10 вычислений:</p>
+<table>
+  <tr>
+    <th>Результат</th>
+    <th>Время добавления</th>
+  </th>
+  {% for sum in results %}
+  <tr>
+    <td>{{ sum.value }}</td>
+    <td>{{ sum.timestamp }}</td>
+  </tr>
+  {% endfor %}
+</table>
