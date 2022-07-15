@@ -1,7 +1,8 @@
 from django.http import HttpResponse
 from django.views import View
 
-class CalcPageView(View):
 
-    def get(self, request, *args, **kwargs):
-        return HttpResponse('calc')
+class index(View):
+
+    def get(self, request, a, b):
+        return HttpResponse(f'{a} + {b} = {a + b}')

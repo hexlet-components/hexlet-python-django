@@ -1,6 +1,6 @@
 from django.urls import path
-from hello_django.calc.views import CalcPageView
+from hello_django.calc.views import index
 
 urlpatterns = [
-    path('', CalcPageView.as_view()),
+    path('<int:a>/<int:b>', index.as_view(), name='calc'),
 ]
