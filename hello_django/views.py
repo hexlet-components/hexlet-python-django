@@ -8,4 +8,4 @@ class IndexView(TemplateView):
     template_name = 'index.html'
 
     def get(self, request, *args, **kwargs):
-        return redirect(reverse('calc', kwargs={'a': 40, 'b': 2}))
+        return redirect(reverse('calc:index', kwargs={'a': 40, 'b': 2}))

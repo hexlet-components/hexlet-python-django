@@ -11,6 +11,9 @@
 # install deps
 make install
 
+# run migrations
+make migrate
+
 # run tests and linter
 make check
 
