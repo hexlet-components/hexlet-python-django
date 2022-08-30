@@ -1,13 +1,20 @@
-<p>Последние 10 вычислений:</p>
-<table>
-  <tr>
-    <th>Результат</th>
-    <th>Время добавления</th>
-  </th>
-  {% for sum in results %}
-  <tr>
-    <td>{{ sum.value }}</td>
-    <td>{{ sum.timestamp }}</td>
-  </tr>
-  {% endfor %}
-</table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+</head>
+<body>
+    {% if history %}
+        <ul>
+        {% for h in history %}
+        <li><p>{{ h.timestamp }}: {{ h.value }}</p></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no records here yet</p>
+    {% endif %}
+</body>
+</html>
