@@ -1,12 +1,12 @@
 version: 2
 updates:
-  - package-ecosystem: "pip"
+  - package-ecosystem: "uv"
     directory: "/"
     schedule:
       interval: "monthly"
     open-pull-requests-limit: 1
     groups:
-      all-pip-dependencies:
+      all-uv-dependencies:
         patterns:
           - "*"
 

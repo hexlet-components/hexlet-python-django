@@ -11,10 +11,10 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
         with:
-          python-version: "3.11"
-      - name: Install poetry
-        run: pip install poetry
+          python-version: "3.13"
       - name: Install dependencies
-        run: make install
+        run: |
+          pip install uv
+          make install
       - name: Run tests and linter
         run: make check

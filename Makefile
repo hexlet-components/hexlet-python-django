@@ -1,26 +1,26 @@
 install:
-	poetry install
+	uv sync
 
 test:
-	poetry run pytest
+	uv run pytest
 
 lint:
-	poetry run ruff check
+	uv run ruff check
 
 check: test lint
 
 run:
-	poetry run python manage.py runserver
+	uv run python manage.py runserver
 
 prod:
 	env DJANGO_SETTINGS_MODULE=hello_django.settings \
-	poetry run gunicorn hello_django.wsgi
+	uv run gunicorn hello_django.wsgi
 
 makemigration:
-	poetry run python manage.py makemigrations
+	uv run python manage.py makemigrations
 
 migrate: makemigration
-	poetry run python manage.py migrate
+	uv run python manage.py migrate
 
 repl:
-	poetry run python manage.py shell
+	uv run python manage.py shell
