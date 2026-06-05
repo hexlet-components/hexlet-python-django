@@ -11,10 +11,19 @@ python = "^3.10"
 Django = ">=4.1,<6.0"
 gunicorn = ">=20.1,<27.0"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pytest = "^9.0.3"
 pytest-django = "^4.12.0"
-wemake-python-styleguide = "^1.6.2"
+ruff = "^0.14.0"
+
+[tool.ruff]
+line-length = 80
+extend-exclude = ["migrations"]
+
+[tool.ruff.lint.per-file-ignores]
+# Django boilerplate stubs
+"hello_django/calc/admin.py" = ["F401"]
+"hello_django/calc/tests.py" = ["F401"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
