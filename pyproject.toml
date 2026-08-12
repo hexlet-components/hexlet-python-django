@@ -5,7 +5,7 @@ description = "A simple Django app"
 authors = [{name = "Hexlet Team", email = "info@hexlet.io"}]
 license = "ISC"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.14"
 dependencies = [
     "django>=6.0.6,<7.0",
     "gunicorn>=20.1,<27.0",
@@ -29,3 +29,9 @@ extend-exclude = ["migrations"]
 # Django boilerplate stubs
 "hello_django/calc/admin.py" = ["F401"]
 "hello_django/calc/tests.py" = ["F401"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "hello_django.settings"
+python_files = ["tests.py", "test_*.py", "*_tests.py"]
+norecursedirs = ["__pycache__", ".venv", "*.egg", ".github"]
+addopts = "--strict-markers"

@@ -1,13 +1,13 @@
 install:
-	uv sync
+	@uv sync
 
 test:
-	uv run pytest
+	@uv run pytest
 
 lint:
-	uv run ruff check
+	@uv run ruff check .
 
-check: test lint
+check: install lint test
 
 run:
 	uv run python manage.py runserver
