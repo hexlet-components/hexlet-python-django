@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hello_django',
-    'hello_django.calc',
+    'calc',
 ]
 
 MIDDLEWARE = [
