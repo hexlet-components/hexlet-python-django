@@ -1,5 +1,5 @@
 from django.urls import path
-from hello_django.calc import views
+from calc import views
 
 app_name = 'calc'
 urlpatterns = [
