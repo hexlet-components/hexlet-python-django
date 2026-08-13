@@ -23,7 +23,11 @@ package = false
 
 [tool.ruff]
 line-length = 80
-extend-exclude = ["migrations"]
+# settings.py и manage.py это шаблон django-admin, его форму мы не ведём
+extend-exclude = ["migrations", "settings.py", "manage.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "C90"]
 
 [tool.ruff.lint.per-file-ignores]
 # Django boilerplate stubs
