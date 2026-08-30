@@ -1,6 +1,7 @@
 ## Self-study for the Django course
 
-## Demo at 
+## Demo at
+
 ---
 
 ### Usefull commands
