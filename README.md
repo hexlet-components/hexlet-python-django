@@ -4,7 +4,7 @@
 
 ---
 
-### Usefull commands
+### Useful commands
 
 ```bash
 # install deps
@@ -16,7 +16,7 @@ make migrate
 # run tests and linter
 make check
 
-# run localy
+# run locally
 make run
 
 # run at wsgi server
