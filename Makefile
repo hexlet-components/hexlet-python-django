@@ -6,6 +6,7 @@ test:
 
 lint:
 	@uv run ruff check .
+	@uv run ruff format --check .
 
 check: install lint test
 
